@@ -20,51 +20,139 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="FacultyCSS.css" />
 
     <title>Faculty Interface</title>
   </head>
 
   <body>
-    <nav id="mainNavbar" class="navbar navbar-dark bg-body-tertiary navbar-expand-md py-0 fixed-top">
-        <a href="#" class="navbar-brand">FAST NU</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse flex-column align-items-end  justify-content-end" id="navLinks">
-          <ul class="navbar-nav">
-            <li class="navbar-item">
-              <a href="" class="nav-link">Courses</a>
-            </li>
-            <li class="navbar-item">
-              <a href="" class="nav-link">Attendance Management</a>
-            </li>
-            <li class="navbar-item">
-              <a href="" class="nav-link">Evaluation Management</a>
-            </li>
-            <li class="navbar-item">
-              <a href="" class="nav-link">Grades and Reports</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      
-      
-      
-    <div class="overlay">
-        <div class="wrapper">
-            <h2>Set Distribution</h2>
-            <a href="#" class="close">&times;</a>
-            <div class="content">
-                <div class="container">
-                    <form action="">
-                        <label for=""></label>
-                    </form>
-                </div>
-            </div>
-        </div>
+    
+    <nav
+      id="mainNavbar"
+      class="navbar navbar-dark bg-body-tertiary navbar-expand-md py-0 fixed-top"
+    >
+      <a href="#" class="navbar-brand">FAST NU</a>
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#navLinks"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse flex-column align-items-end justify-content-end"
+        id="navLinks"
+      >
+        <ul class="navbar-nav">
+          <li class="navbar-item">
+            <a href="" class="nav-link">Courses</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="nav-link" onclick="openForm()"
+              >Marks Distribution</a
+            >
+          </li>
+          <li class="navbar-item">
+            <a href="" class="nav-link">Attendance Management</a>
+          </li>
+          <li class="navbar-item">
+            <a href="" class="nav-link">Evaluation Management</a>
+          </li>
+          <li class="navbar-item">
+            <a href="" class="nav-link">Grades and Reports</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-    </div>  
+    <!-- Mini Masrks Distribution Form -->
+    <div id="miniDistributionForm" class="Distribution">
+      <h2>Marks Distribution</h2>
+      <form>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="evalName1">1 Assigment:</label>
+              <input type="text" class="form-control" id="evalName1" name="evalName1">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="weightage1">Weightage (0-100):</label>
+              <input type="number" class="form-control" id="weightage1" name="weightage1" min="0" max="100">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="evalName2">2 Final Exam:</label>
+              <input type="text" class="form-control" id="evalName2" name="evalName2">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="weightage2">Weightage (0-100):</label>
+              <input type="number" class="form-control" id="weightage2" name="weightage2" min="0" max="100">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="evalName3">3 Quiz:</label>
+              <input type="text" class="form-control" id="evalName3" name="evalName3">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="weightage3">Weightage (0-100):</label>
+              <input type="number" class="form-control" id="weightage3" name="weightage3" min="0" max="100">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="evalName4">4 Sessional-I:</label>
+              <input type="text" class="form-control" id="evalName4" name="evalName4">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="weightage4">Weightage (0-100):</label>
+              <input type="number" class="form-control" id="weightage4" name="weightage4" min="0" max="100">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="evalName4">5 Sessional-II:</label>
+              <input type="text" class="form-control" id="evalName4" name="evalName4">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="weightage4">Weightage (0-100):</label>
+              <input type="number" class="form-control" id="weightage4" name="weightage4" min="0" max="100">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button type="button" class="btn btn-outline-warning btn-md" onclick="resetForm()">Reset to Default Values</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-outline-success btn-md" onclick="saveForm()">Save</button>
+          </div>
+        </div>
+      </form>
+      <button onclick="closeForm()" class="btn btn-outline-danger btn-sm">Close</button>
+    </div>
+
 
     <div class="container mt-5">
       <h1>Welcome, Faculty Member</h1>
@@ -94,5 +182,46 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <!-- Custom JS -->
+    
+    <script>
+      function openForm() {
+        document.getElementById("miniDistributionForm").style.display = "block";
+      }
+      function resetForm() {
+    // Set all input values to default (e.g., clear the fields)
+    document.getElementById("evalName1").value = "";
+    document.getElementById("weightage1").value = "";
+    document.getElementById("evalName2").value = "";
+    document.getElementById("weightage2").value = "";
+    document.getElementById("evalName3").value = "";
+    document.getElementById("weightage3").value = "";
+    document.getElementById("evalName4").value = "";
+    document.getElementById("weightage4").value = "";
+  }
+
+  function saveForm() {
+    // Get the values from the input fields
+    var evalName1 = document.getElementById("evalName1").value;
+    var weightage1 = document.getElementById("weightage1").value;
+    var evalName2 = document.getElementById("evalName2").value;
+    var weightage2 = document.getElementById("weightage2").value;
+    var evalName3 = document.getElementById("evalName3").value;
+    var weightage3 = document.getElementById("weightage3").value;
+    var evalName4 = document.getElementById("evalName4").value;
+    var weightage4 = document.getElementById("weightage4").value;
+
+    // Perform any desired operations with the form values (e.g., save to a database)
+
+    // Display a success message
+    alert("Form saved successfully!");
+  }
+
+
+      function closeForm() {
+        document.getElementById("miniDistributionForm").style.display = "none";
+      }
+    </script>
+
   </body>
 </html>
