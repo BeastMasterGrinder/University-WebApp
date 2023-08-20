@@ -55,9 +55,9 @@ Welcome to the University Management System project repository! This project is 
 
 ## Contributors
 
-- [Your Name](https://github.com/your-username)
-- [Contributor 1](https://github.com/contributor1)
-- [Contributor 2](https://github.com/contributor2)
+- [Muhammad Farjad](https://github.com/BeastMasterGrinder)
+- [Muhammad Arfat](https://github.com/arfatkh)
+- [Shazaib Irfan]()
 
 We welcome contributions from others! Feel free to open issues, submit pull requests, and provide feedback to help us improve the University Management System project.
 
