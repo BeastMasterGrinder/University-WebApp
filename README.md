@@ -26,32 +26,16 @@ Welcome to the University Management System project repository! This project is 
 
 ## Installation
 
-1. Clone the repository to your local machine:
+Clone the repository to your local machine:
    ```bash
    git clone https://github.com/your-username/university-management-system.git
    ```
 
-2. Navigate to the project directory:
-   ```bash
-   cd university-management-system
-   ```
-
-3. Install project dependencies:
-   ```bash
-   npm install
-   ```
-
-4. Run the application:
-   ```bash
-   npm start
-   ```
-
 ## Technologies Used
 
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js, Express.js
-- Database: MongoDB
-- Additional Libraries: React.js (for frontend components), Mongoose (for database interaction)
+- Frontend: HTML, CSS, Asp.net, C#
+- Backend: Asp.net, C#
+- Database: SQL
 
 ## Contributors
 
